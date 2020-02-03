@@ -14,6 +14,10 @@
 		A754C9A623E820AA0023CBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A754C9A523E820AA0023CBC0 /* Assets.xcassets */; };
 		A754C9A923E820AA0023CBC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A754C9A823E820AA0023CBC0 /* Preview Assets.xcassets */; };
 		A754C9AC23E820AA0023CBC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A754C9AA23E820AA0023CBC0 /* LaunchScreen.storyboard */; };
+		A754C9B523E828160023CBC0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9B423E828160023CBC0 /* CoreDataManager.swift */; };
+		A754C9B823E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9B723E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift */; };
+		A754C9BB23E82D460023CBC0 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */; };
+		A754C9BE23E82FBD0023CBC0 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		A754C9A823E820AA0023CBC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A754C9AB23E820AA0023CBC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A754C9AD23E820AA0023CBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A754C9B423E828160023CBC0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A754C9B723E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 		A754C99B23E820A90023CBC0 /* ListAndDeleteApp */ = {
 			isa = PBXGroup;
 			children = (
+				A754C9BC23E82E2A0023CBC0 /* Views */,
+				A754C9B923E82CF70023CBC0 /* ViewModels */,
+				A754C9B623E82A840023CBC0 /* Extension */,
+				A754C9B323E827EE0023CBC0 /* Managers */,
 				A754C99C23E820A90023CBC0 /* AppDelegate.swift */,
 				A754C99E23E820A90023CBC0 /* SceneDelegate.swift */,
 				A754C9A323E820A90023CBC0 /* ContentView.swift */,
@@ -76,6 +88,38 @@
 				A754C9A823E820AA0023CBC0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A754C9B323E827EE0023CBC0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A754C9B423E828160023CBC0 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A754C9B623E82A840023CBC0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A754C9B723E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A754C9B923E82CF70023CBC0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A754C9BC23E82E2A0023CBC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +196,11 @@
 				A754C99D23E820A90023CBC0 /* AppDelegate.swift in Sources */,
 				A754C9A223E820A90023CBC0 /* ListAndDeleteApp.xcdatamodeld in Sources */,
 				A754C9A423E820A90023CBC0 /* ContentView.swift in Sources */,
+				A754C9BE23E82FBD0023CBC0 /* AddTaskView.swift in Sources */,
+				A754C9BB23E82D460023CBC0 /* AddTaskViewModel.swift in Sources */,
+				A754C9B523E828160023CBC0 /* CoreDataManager.swift in Sources */,
 				A754C99F23E820A90023CBC0 /* SceneDelegate.swift in Sources */,
+				A754C9B823E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
