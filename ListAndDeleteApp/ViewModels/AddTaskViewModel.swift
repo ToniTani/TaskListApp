@@ -14,4 +14,7 @@ class AddTaskViewModel {
     var name: String = ""
     var type: String = ""
     
+    func saveTask() {
+        CoreDataManager.shared.saveTask(name: self.name, type: self.type)
+    }
 }

@@ -18,6 +18,7 @@
 		A754C9B823E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9B723E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift */; };
 		A754C9BB23E82D460023CBC0 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */; };
 		A754C9BE23E82FBD0023CBC0 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */; };
+		A7AFBB5823ED585600C9920F /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AFBB5723ED585600C9920F /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A754C9B723E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 		A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		A7AFBB5723ED585600C9920F /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */,
+				A7AFBB5723ED585600C9920F /* TaskListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				A754C9BB23E82D460023CBC0 /* AddTaskViewModel.swift in Sources */,
 				A754C9B523E828160023CBC0 /* CoreDataManager.swift in Sources */,
 				A754C99F23E820A90023CBC0 /* SceneDelegate.swift in Sources */,
+				A7AFBB5823ED585600C9920F /* TaskListViewModel.swift in Sources */,
 				A754C9B823E82ACF0023CBC0 /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
