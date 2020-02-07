@@ -8,21 +8,49 @@
 
 import SwiftUI
 
-
 struct AddTaskView: View {
-    
-    @State var addTaskVM = AddTaskViewModel()
-    
-    var body: some View {
+    @Binding var isPresented: Bool
+        @State var addTaskVM = AddTaskViewModel()
         
-        VStack {
-            TextField("Add task", text: self.$addTaskVM.name)
+        var body: some View {
+            
+            NavigationView {
+            
+            Group {
+            
+            VStack {
+                
+                TextField("Enter task", text: self.$addTaskVM.name)
+                
+                Picker(selection: self.$addTaskVM.type, label: Text("")) {
+                    Text("Important!").tag("red")
+                    Text("Normal").tag("green")
+                    Text("Not Important").tag("blue")
+                }.pickerStyle(SegmentedPickerStyle())
+                
+                Button("Add Task") {
+                    // place order
+                    self.addTaskVM.saveTask()
+                   // self.isPresented = false
+                    
+                }.padding(8)
+                    .foregroundColor(Color.white)
+                    .background(Color.black)
+                    .cornerRadius(10)
+                
+            }
+            }.padding()
+            
+                
+                .navigationBarTitle("Add Order")
+            }
         }
     }
-}
 
-struct AddTaskView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddTaskView()
+    #if DEBUG
+    struct AddOrderView_Previews: PreviewProvider {
+        static var previews: some View {
+            AddTaskView(isPresented: .constant(false))
+        }
     }
-}
+    #endif

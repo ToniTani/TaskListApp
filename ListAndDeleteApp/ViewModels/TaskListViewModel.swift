@@ -14,10 +14,31 @@ import Combine
 class TaskListViewModel: ObservableObject {
     
     @Published
-    var tasks = [TaskListViewModel]()
+    var tasks = [TaskViewModel]()
     
-    init()
-    fetch All tasks
+    init() {
+        fetchAllTasks()
+    }
     
+    func deleteTask(_ taskVM: TaskViewModel) {
+            CoreDataManager.shared.deleteTask(name: taskVM.name)
+            fetchAllTasks()
+        }
+        
+        func fetchAllTasks() {
+            self.tasks = CoreDataManager.shared.getAllTasks().map(TaskViewModel.init)
+            print(self.tasks)
+        }
+    }
+class TaskViewModel {
+    
+    var name = ""
+    var type = ""
+    
+    init(task: Task) {
+        self.name = task.name!
+        self.name = task.type!
+        
+    }
     
 }
