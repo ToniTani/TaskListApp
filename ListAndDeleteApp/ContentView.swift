@@ -19,8 +19,8 @@ struct ContentView: View {
     
     private func delete(at offsets: IndexSet) {
         offsets.forEach { index in
-            let taskVM = self.taskListVM.tasks[index]
-            self.taskListVM.deleteTask(taskVM)
+            let taskVM = self.taskListVM.orders[index]
+            self.taskListVM.deleteOrder(taskVM)
         }
     }
     
@@ -30,7 +30,7 @@ struct ContentView: View {
         
         List {
             
-            ForEach(self.taskListVM.tasks, id: \.name) { task in
+            ForEach(self.taskListVM.orders, id: \.name) { task in
                 HStack {
                     Image(task.type)
                         .resizable()
@@ -47,17 +47,17 @@ struct ContentView: View {
         }
         .sheet(isPresented: $isPresented, onDismiss: {
             print("ONDISMISS")
-            self.taskListVM.fetchAllTasks()
+            self.taskListVM.fetchAllOrders()
         }, content: {
             AddTaskView(isPresented: self.$isPresented)
         })
-        .navigationBarTitle("Orders")
-        .navigationBarItems(trailing: Button("Add New Order") {
+        .navigationBarTitle("Tasks")
+        .navigationBarItems(trailing: Button("Add New Task") {
             self.isPresented = true
         })
         }
         
-    }
+    } // vie roskat, käy kaupassa
 }
 
 #if DEBUG

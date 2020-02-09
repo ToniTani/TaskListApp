@@ -19,42 +19,28 @@ class CoreDataManager {
     self.moc = moc
     }
     
-    private func fetchTask(name: String) -> Task? {
+    private func fetchOrder(name: String) -> Order? {
         
-        var tasks = [Task]()
+        var orders = [Order]()
         
-        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        let request: NSFetchRequest<Order> = Order.fetchRequest()
         request.predicate = NSPredicate(format: "name == %@", name)
         
         do {
-            tasks = try self.moc.fetch(request)
+            orders = try self.moc.fetch(request)
         } catch let error as NSError {
             print(error)
         }
         
-        return tasks.first
+        return orders.first
         
     }
-    func getAllTasks() -> [Task] {
-        
-        var tasks = [Task]()
-        
-        let taskRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    
+    func deleteOrder(name: String) {
         
         do {
-            tasks = try self.moc.fetch(taskRequest)
-        } catch let error as NSError {
-            print(error)
-        }
-        
-        return tasks
-        
-    }
-    func deleteTask(name: String) {
-        
-        do {
-            if let task = fetchTask(name: name) {
-                self.moc.delete(task)
+            if let order = fetchOrder(name: name) {
+                self.moc.delete(order)
                 try self.moc.save()
             }
         } catch let error as NSError {
@@ -64,16 +50,34 @@ class CoreDataManager {
     }
     
     
-    func saveTask(name: String, type:String) {
-        let task = Task(context: self.moc)
-        task.name = name
-        task.type = type
+    func getAllOrders() -> [Order] {
+        
+        var orders = [Order]()
+        
+        let orderRequest: NSFetchRequest<Order> = Order.fetchRequest()
+        
+        do {
+            orders = try self.moc.fetch(orderRequest)
+        } catch let error as NSError {
+            print(error)
+        }
+        
+        return orders
+        
+    }
+    
+    func saveOrder(name: String, type: String) {
+        
+        let order = Order(context: self.moc)
+        order.name = name
+        order.type = type
         
         do {
             try self.moc.save()
         } catch let error as NSError {
             print(error)
         }
+        
     }
     
 }

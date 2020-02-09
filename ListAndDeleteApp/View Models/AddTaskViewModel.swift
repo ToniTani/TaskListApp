@@ -14,7 +14,7 @@ class AddTaskViewModel {
     var name: String = ""
     var type: String = ""
     
-    func saveTask() {
-        CoreDataManager.shared.saveTask(name: self.name, type: self.type)
+    func saveOrder() {
+        CoreDataManager.shared.saveOrder(name: self.name, type: self.type)
     }
 }

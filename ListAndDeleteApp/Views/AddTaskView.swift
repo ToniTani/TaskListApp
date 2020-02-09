@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct AddTaskView: View {
+    
     @Binding var isPresented: Bool
-        @State var addTaskVM = AddTaskViewModel()
+    @State var addTaskVM = AddTaskViewModel()
         
         var body: some View {
             
@@ -29,9 +30,9 @@ struct AddTaskView: View {
                 }.pickerStyle(SegmentedPickerStyle())
                 
                 Button("Add Task") {
-                    // place order
-                    self.addTaskVM.saveTask()
-                   // self.isPresented = false
+                  
+                    self.addTaskVM.saveOrder()
+            
                     
                 }.padding(8)
                     .foregroundColor(Color.white)
@@ -42,7 +43,7 @@ struct AddTaskView: View {
             }.padding()
             
                 
-                .navigationBarTitle("Add Order")
+                .navigationBarTitle("Add Task!")
             }
         }
     }

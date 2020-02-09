@@ -69,10 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				A754C9BC23E82E2A0023CBC0 /* Views */,
-				A754C9B923E82CF70023CBC0 /* ViewModels */,
+				A754C9B923E82CF70023CBC0 /* View Models */,
 				A754C9B623E82A840023CBC0 /* Extension */,
 				A754C9B323E827EE0023CBC0 /* Managers */,
 				A754C99C23E820A90023CBC0 /* AppDelegate.swift */,
+				A7AFBB5923ED69E200C9920F /* ContentView.swift */,
 				A754C99E23E820A90023CBC0 /* SceneDelegate.swift */,
 				A754C9A523E820AA0023CBC0 /* Assets.xcassets */,
 				A754C9AA23E820AA0023CBC0 /* LaunchScreen.storyboard */,
@@ -107,20 +108,19 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		A754C9B923E82CF70023CBC0 /* ViewModels */ = {
+		A754C9B923E82CF70023CBC0 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				A754C9BA23E82D460023CBC0 /* AddTaskViewModel.swift */,
 				A7AFBB5723ED585600C9920F /* TaskListViewModel.swift */,
 			);
-			path = ViewModels;
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A754C9BC23E82E2A0023CBC0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				A754C9BD23E82FBD0023CBC0 /* AddTaskView.swift */,
-				A7AFBB5923ED69E200C9920F /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +344,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ListAndDeleteApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ListAndDeleteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +364,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ListAndDeleteApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ListAndDeleteApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
